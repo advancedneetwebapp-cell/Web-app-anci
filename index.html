@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANCI</title>
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a3caa">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ANCI">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="splash"><img src="logo.png" alt="ANCI logo"><p>Advanced NEET Coaching Institute</p></div>
+
+<section id="login" hidden>
+  <div class="authbox">
+    <img src="logo.png" alt="ANCI" class="authlogo">
+    <h2>ANCI Login</h2>
+    <input id="lid" placeholder="Student ID" autocomplete="username">
+    <input id="lpw" type="password" placeholder="Password" autocomplete="current-password">
+    <button class="pri" id="loginBtn">Log in</button>
+    <p id="lmsg" class="msg" role="alert"></p>
+  </div>
+</section>
+
+<section id="student" hidden></section>
+<section id="admin" hidden></section>
+
+<script type="module" src="app.js"></script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}</script>
+</body>
+</html>
